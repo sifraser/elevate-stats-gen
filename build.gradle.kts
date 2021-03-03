@@ -15,13 +15,14 @@ group = "com.sifraser"
 
 val jar by tasks.getting(Jar::class) {
     manifest {
-        attributes["Main-Class"] = "com.sifraser.rowmon.RowmonKt"
+        attributes["Main-Class"] = "com.sifraser.elevate.statsgen.ElevateStatsGenKt"
     }
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
     implementation("com.opencsv:opencsv:5.3")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
